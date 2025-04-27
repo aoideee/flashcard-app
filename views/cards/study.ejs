@@ -1,0 +1,32 @@
+<!-- File: views/cards/study.ejs -->
+
+<%- include('../partials/header') %>
+
+<main class="main">
+  <!-- Flashcard Display -->
+  <div class="study-container">
+    <div id="flashcard" class="flashcard pixel-border"
+         data-cards='<%- JSON.stringify(cards) %>'>
+      <div class="front"><%= cards[0].front %></div>
+      <div class="back"><%= cards[0].back %></div>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons flex center">
+    <button id="prev" class="arrow" aria-label="Previous card">&lt;</button>
+    <button id="next" class="arrow" aria-label="Next card">&gt;</button>
+  </div>
+
+  <!-- Edit/Delete in Study Mode -->
+  <div class="actions flex center study-actions" style="margin-top:1rem;">
+    <button id="edit-btn" class="btn">Edit</button>
+    <button id="delete-btn" class="btn">Delete</button>
+  </div>
+
+  <!-- Progress Counter -->
+  <div class="counter">1/<%= cards.length %></div>
+</main>
+
+<%- include('../partials/footer') %>
+<script src="/js/study.js"></script>

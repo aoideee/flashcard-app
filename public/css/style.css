@@ -1,0 +1,232 @@
+/* File: public/css/style.css */
+
+/* ─── Reset & Global ────────────────────────────────────────────────────────── */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Press Start 2P", monospace;
+  color: #333;
+}
+
+/* ─── Layout & Structure ───────────────────────────────────────────────────── */
+.main {
+  flex: 1;                          /* grow to push footer down */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.study-container {
+  width: 320px;
+  height: 240px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* ─── Header & Footer ──────────────────────────────────────────────────────── */
+.header,
+.footer {
+  flex-shrink: 0;                   /* never collapse */
+  background: rgba(255, 228, 240, 0.9);
+  box-shadow: inset 0 -6px 0 #ffcce6;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ─── Navigation Links ─────────────────────────────────────────────────────── */
+.nav a {
+  display: inline-block;
+  margin: 0 .75rem;
+  padding: .5rem 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 3px solid #ffcce6;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #555;
+  image-rendering: pixelated;
+}
+
+.nav a:hover {
+  background: #fff0f8;
+}
+
+/* ─── Card Grid ────────────────────────────────────────────────────────────── */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card-item {
+  text-align: center;
+  background: rgba(255, 240, 248, 0.9);
+  border: 6px solid #ffcce6;
+  box-shadow: 4px 4px 0 #ffd4e6;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+/* ─── Flashcard Flip Styles ────────────────────────────────────────────────── */
+.flashcard {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flashcard .front,
+.flashcard .back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.flashcard .front {
+  background: #fff0f8;
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.flashcard .back {
+  background: #ffe4f0;
+  transform: rotateY(180deg);
+}
+
+.flashcard.flip {
+  transform: rotateY(180deg);
+}
+
+/* ─── Controls (Arrows & Counter) ─────────────────────────────────────────── */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.arrow {
+  background: #ffe4f0;
+  border: 4px solid #ffcce6;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.counter {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* ─── Buttons & Actions ───────────────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  margin: 0 .5rem;
+  padding: .5rem 1rem;
+  background: #fff0f8;
+  border: 4px solid #ffcce6;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #555;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #ffe4f0;
+}
+
+.actions {
+  margin-top: 0.75rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.75rem;
+}
+
+.study-actions {
+  flex-direction: row; 
+  gap: 1rem;       
+}
+
+/* ─── Form Styles ─────────────────────────────────────────────────────────── */
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #555;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(255, 240, 248, 0.9);
+  border: 6px solid #ffcce6;
+  box-shadow: 4px 4px 0 #ffd4e6;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: .5rem;
+  font-size: .9rem;
+  color: #333;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+  padding: .75rem;
+  border: 4px solid #ffcce6;
+  border-radius: 4px;
+  background: #fff0f8;
+  font-size: .9rem;
+}
+
+.btn-primary {
+  align-self: center;
+  background: #ffe4f0;
+  border: 6px solid #ffcce6;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background: #fff0f8;
+}

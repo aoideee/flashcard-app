@@ -1,0 +1,31 @@
+<!-- File: views/cards/form.ejs -->
+
+<%- include('../partials/header') %>
+
+<main class="main">
+  <!-- Title adjusts based on presence of card.id -->
+  <h2 class="form-title">
+    <%= card.id ? 'Edit Flashcard' : 'Create a New Flashcard' %>
+  </h2>
+
+  <form class="form-card" action="<%= action %>" method="POST">
+    <!-- Front Side Field -->
+    <div class="form-group">
+      <label for="front">Front Side</label>
+      <textarea id="front" name="front" required><%= card.front || '' %></textarea>
+    </div>
+
+    <!-- Back Side Field -->
+    <div class="form-group">
+      <label for="back">Back Side</label>
+      <textarea id="back" name="back" required><%= card.back || '' %></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">
+      <%= card.id ? 'Update Card' : 'Save Card' %>
+    </button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

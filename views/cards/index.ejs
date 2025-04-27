@@ -1,0 +1,21 @@
+<!-- File: views/cards/index.ejs -->
+
+<%- include('../partials/header') %>
+
+<section class="grid card-list">
+  <% cards.forEach(card => { %>
+    <div class="card-item pixel-border">
+      <!-- Display front text of card -->
+      <p><%= card.front %></p>
+      <!-- Edit/Delete actions -->
+      <div class="actions flex center">
+        <a href="/cards/<%= card.id %>/edit" class="btn">Edit</a>
+        <form action="/cards/<%= card.id %>?_method=DELETE" method="POST" style="display:inline">
+          <button type="submit" class="btn">Delete</button>
+        </form>
+      </div>
+    </div>
+  <% }) %>
+</section>
+
+<%- include('../partials/footer') %>

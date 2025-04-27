@@ -1,6 +1,6 @@
-# PastelFlip (Flashcard App)
+# PixelPedia (Flashcard App)
 
-**PastelFlip** is a cute, pixel-art-themed flashcard web application for creating, reviewing, and managing study cards—think Quizlet, but in retro pastel pixel style.
+**PixelPedia** is a cute, pixel-art-themed flashcard web application for creating, reviewing, and managing study cards—think Quizlet, but in retro pastel pixel style.
 
 ---
 ## Table of Contents
@@ -42,8 +42,8 @@
 ## Installation
 1. **Clone** the repo:
    ```bash
-   git clone <YOUR_REPO_URL> pastelflip
-   cd pastelflip
+   git clone https://github.com/aoideee/flashcard-app.git pixelpedia
+   cd pixelpedia
    ```
 2. **Install** dependencies:
    ```bash
@@ -97,6 +97,7 @@
 flashcard-app/
 ├── app.js                 # Entry point
 ├── .env                   # Environment variables
+├── .gitignore
 ├── db-setup.sql           # SQL script to create DB & table
 ├── package.json
 ├── config/
@@ -118,8 +119,7 @@ flashcard-app/
 │       └── study.ejs      # Study interface
 └── public/
     ├── css/style.css
-    ├── js/study.js
-    └── images/pixel-bg.png
+    └── js/study.js
 ```
 
 ---
@@ -134,7 +134,3 @@ flashcard-app/
 ## Error Handling & 404
 - All database queries wrapped in `try/catch` with console logging.
 - Express middleware catches undefined routes and serves `notfoundpage.ejs`.
-
----
-## License
-MIT © Your Name or Organization

@@ -13,7 +13,6 @@
 7. [File Structure](#file-structure)
 8. [Usage](#usage)
 9. [Error Handling & 404](#error-handling--404)
-10. [License](#license)
 
 ---
 ## Features

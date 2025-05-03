@@ -41,8 +41,8 @@
 ## Installation
 1. **Clone** the repo:
    ```bash
-   git clone https://github.com/aoideee/flashcard-app.git pixelpedia
-   cd pixelpedia
+   git clone https://github.com/aoideee/flashcard-app.git
+   cd flashcard-app
    ```
 2. **Install** dependencies:
    ```bash

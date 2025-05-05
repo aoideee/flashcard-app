@@ -21,7 +21,7 @@
 - **Edit** and **Delete** existing cards
 - **Study Mode**: click-to-flip interface with progress counter
 - Responsive layout using **Flexbox** & **CSS Grid**
-- **Pastel pixel** aesthetic with custom CSS theme
+- **PixelPedia** aesthetic with custom CSS theme
 
 ---
 ## Technology Stack

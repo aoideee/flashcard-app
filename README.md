@@ -28,7 +28,7 @@
 - **Server**: Node.js, Express.js
 - **Templating**: EJS (Embedded JavaScript)
 - **Database**: PostgreSQL (via `pg`)
-- **Styling**: Vanilla CSS, Flexbox & Grid, pixel-font (`Press Start 2P`)
+- **Styling**: Vanilla CSS, Flexbox & Grid, pixel-font
 - **Version Control**: Git
 
 ---
